@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+      
+      .container h2{
+          text-align: center;
+      }
+      .reg-form{
+       display: grid;
+       grid-template-columns: 50% 50%;
+      }
+      .reg-form div{
+        padding: 2% 10%;
+      }
+      .submit-btn{
+        padding-top: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">Ridobiko</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="jumbotron">
+        <div class="container text-center">
+          <h1>Ridobiko Assignment</h1>      
+          <p>Registration Form</p>
+        </div>
+      </div>
+      <div class="container">
+      <form action="saveUser.php" enctype="multipart/form-data" method="POST">
+        <div class="reg-form">
+
+        
+          <div>
+              <input class="form-control" type="text" placeholder="Name" name="customer_name" required>
+          </div>
+          <div>
+              <input class="form-control" type="number" placeholder="Mobile" name="customer_mobile" required>
+          </div>
+          <div>
+              <input class="form-control" type="text-area" placeholder="Address" name="customer_address" required>
+          </div>
+          <div>
+              <input class="form-control" type="number" placeholder="Aadhar Number" name="customer_ano" required>
+          </div>
+        <div class="form-group">
+            <label for="Aadhar_Font_page">Aadhar Font page</label>
+            <input type="file" class="form-control-file" name="customer_adar_front" required >
+          </div>
+          <div class="form-group">
+            <label for="User_profile">Profile Image</label>
+            <input type="file" class="form-control-file" name="customer_profile_img"required>
+          </div>
+          <div class="form-group">
+            <label for="Aadhar_Back_page">Aadhar Back page</label>
+            <input type="file" class="form-control-file" name="customer_adar_back" required>
+          </div>
+          <div class="form-group">
+            <label for="Driving_license">Driving License</label>
+            <input type="file" class="form-control-file" name="customer_license_img" required>
+          </div>
+          <div>
+              <input class="form-control" type="text" placeholder="License Number" name= "license_no" required>
+          </div>
+          <div>
+            <input class="form-control" type="date" placeholder="License Expiry Date" name="exp_date" required>
+        </div>
+      </div>
+          <div class="submit-btn">
+              <div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+          </div>
+      </form>
+    </div>
+
+      <footer class="container-fluid text-center">
+        <p></p>
+      </footer>
+      <script>
+        $(function() {
+        $('#datetimepicker3').datetimepicker({
+      pickDate: false
+    });
+  });
+      </script>
+</body>
+</html>
